@@ -11,6 +11,9 @@ function init() {
   // Write your JavaScript code inside the init() function
   const body = document.querySelector('body')
   body.addEventListener('keydown', (event) => {
+    if (tracker === code.length){
+      event.preventDefault()
+    }
     if (event.which === code[tracker]){
       console.log('Success!')
       tracker++;
