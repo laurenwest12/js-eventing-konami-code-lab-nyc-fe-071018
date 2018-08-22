@@ -29,7 +29,6 @@ function onKeyDownHandler(event){
 
 function init() {
   const body = document.querySelector('body')
-  body.addEventListener('keydown', (event) => onKeyDownHandler)
 }
 
 init()
