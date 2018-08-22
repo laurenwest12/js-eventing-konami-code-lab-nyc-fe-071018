@@ -9,11 +9,12 @@ let tracker = 0
 
 function onKeyDownHandler(event){
   //tracker keeps track of where we are in an array
+  const key = parseInt (event.detail || event.which)
     if (tracker === code.length){
       event.preventDefault()
       return
     }
-    if (event.which === code[tracker]){
+    if (key === code[tracker]){
       console.log('Success!')
       tracker++;
       if (tracker === code.length){
