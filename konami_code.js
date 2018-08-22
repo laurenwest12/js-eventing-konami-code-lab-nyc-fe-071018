@@ -23,10 +23,8 @@ function onKeyDownHandler(event){
       console.log('Failure')
       tracker = 0
     }
-  })
 }
 
-onKeyDownHandler()
 
 function init() {
   const body = document.querySelector('body')
