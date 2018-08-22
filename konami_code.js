@@ -5,6 +5,31 @@ const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 //We want to add an event listener somewhere so that when we press this, something happens
 //We need to keep track of where we are in the combo
 
+function onKeyDownHandler(event){
+  //tracker keeps track of where we are in an array
+  let tracker = 0
+  // Write your JavaScript code inside the init() function
+  const body = document.querySelector('body')
+  body.addEventListener('keydown', (event) => {
+    if (tracker === code.length){
+      event.preventDefault()
+      return
+    }
+    if (event.which === code[tracker]){
+      console.log('Success!')
+      tracker++;
+      if (tracker === code.length){
+        alert('You found it!')
+      }
+    } else {
+      console.log('Failure')
+      tracker = 0
+    }
+  })
+}
+
+onKeyDownHandler()
+
 function init() {
   //tracker keeps track of where we are in an array
   let tracker = 0
