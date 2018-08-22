@@ -29,22 +29,7 @@ function onKeyDownHandler(event){
 
 function init() {
   const body = document.querySelector('body')
-  body.addEventListener('keydown', (event) => {
-    if (tracker === code.length){
-      event.preventDefault()
-      return
-    }
-    if (event.which === code[tracker]){
-      console.log('Success!')
-      tracker++;
-      if (tracker === code.length){
-        alert('You found it!')
-      }
-    } else {
-      console.log('Failure')
-      tracker = 0
-    }
-  })
+  body.addEventListener('keydown', (event) => onKeyDownHandler
 }
 
 init()
