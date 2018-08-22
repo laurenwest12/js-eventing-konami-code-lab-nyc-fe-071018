@@ -26,6 +26,7 @@ function onKeyDownHandler(event){
     }
 }
 
+onKeyDownHandler()
 
 function init() {
   const body = document.querySelector('body')
