@@ -13,6 +13,9 @@ function init() {
     if (event.which === code[tracker]){
       console.log('Success!')
       tracker++;
+      if (tracker === code.length - 1){
+        alert('You found it!')
+      }
     } else {
       console.log('Failure')
       tracker = 0
